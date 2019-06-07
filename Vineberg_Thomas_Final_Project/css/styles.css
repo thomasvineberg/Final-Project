@@ -1,0 +1,92 @@
+#demo, #form1, #form2, #form2a, #form3, #formotheraddress, #unhide, #jumbotron2 {
+    display: none;
+}
+#demo {
+    padding: 10px;
+    border-style: solid;
+    border-radius: 0 10px 0 10px;
+    border-width: 2px 2px 4px 6px;
+    border-color: brown;
+}
+
+.mytopping {
+    float: left;
+    margin: 2px;
+}
+#submit2 {
+    float: none;
+}
+
+fieldset {
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 2px;
+    border-color: green;
+    padding: 20px;
+}
+
+.textfield input {
+    width: 100%;
+    border-width: medium;
+    border-color: red;
+    background-color: #ffe2e2;
+}
+
+
+#formapt, #formapt2 {
+    border-color: grey;
+    background-color: white;
+}
+
+.validate {
+    font-style: italic;
+}
+
+select {
+    margin: 5px;
+}
+
+h3, h4, .nav-link {
+    color: brown;
+}
+
+#navactive {
+    background-color: brown;
+}
+
+#pslogo {
+    height: 100px;
+    width: auto;
+}
+
+.jumbotron h1, .jumbotron p {  
+    font-weight: 800;
+}
+
+#jumbotron1 {
+    background: url(../pizza1b.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#jumbotron2 {
+    background: url(../pizza2b.png) center no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+input {
+    width: 100%
+    float: none;
+}
+
+#price_order, #cardtype {
+    margin-left: 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 48em) {
+    #pslogo {
+        height: 70px;
+        width: auto;
+    }
+}

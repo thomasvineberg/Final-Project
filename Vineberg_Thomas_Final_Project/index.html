@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!--NARROW JUMBOTRON-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>pizza.slice()</title>
+
+    <!-- Bootstrap core CSS 
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="css/narrow-jumbotron.css" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/narrow-jumbotron.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+</head>
+
+
+<body>
+ 
+     <div class="container">
+      <div class="header clearfix">
+        <!-- Unneeded navigation menu
+         <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" id="navactive" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav> -->
+        <img id="pslogo" src="pslogo.png" alt="logo">
+        <!--<h3>A JavaScript Pizzeria</h3>-->
+      </div>
+        
+      <div class="jumbotron" id="jumbotron1">
+        <h1 class="display-3">The Best Pizza is Virtual Pizza</h1>
+        <p class="lead">You know you don't want to cook tonight.  Instead, why not download a hot, delicious slice of pixelated pizza?  Crispy HTML5 crust, fresh, juicy CSS sauce and hand-coded, JavaScripted toppings. It's a pizza that fits into any diet!</p>
+        <p id="getstarted"><a class="btn btn-lg btn-success" href="#" role="button">Let's Get Started!</a></p>
+      </div>
+      
+      <div class="jumbotron" id="jumbotron2">
+        <h1 class="display-3">Congratulations!</h1>
+        <p class="lead">Your Delicious Pizza is on its Way! Yum!</p>
+        <p id="backtostart"><a class="btn btn-lg btn-success" href="#" role="button">Order Another Pizza</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-8">
+          <form id="form1">
+    <fieldset class="textfield">
+   <h4>Enter Your Delivery Information</h4>
+   <label>Name:</label><label class="validate" id="namevalid"></label><input id="formname" type="text" value=""><br>
+    <label>Address Type:</label><select id="addressdropdown">
+        <option value="house">House</option>
+        <option value="apartment">Apartment</option>
+        <option value="business">Business</option>
+        <option value="campus">Campus</option>
+        <option value="hotel">Hotel</option>
+        <option value="dorm">Dorm</option>
+        <option value="other">Other</option>
+        </select><br>
+    <span id="formotheraddress"><label>Other Address Type:</label><label class="validate" id="otheraddvalid"></label><input id="formother_address" type="text" value=""><br></span>
+    <label>Street Address:</label><label class="validate" id="addvalid"></label><input id="formaddress" type="text" value=""><br>
+    <label>Apartment or Space (optional):</label><input id="formapt" type="text" value=""><br>
+    <label>City:</label><label class="validate" id="cityvalid"></label><input id="formcity" type="text" value=""><br>
+    <label>State:</label><label class="validate" id="statevalid"></label><input id="formstate" type="text" value=""><br>
+    <label>ZIP:</label><label class="validate" id="zipvalid"></label><input id="formzip" type="text" value=""><br>
+    <label>Phone:</label><label class="validate" id="phonevalid"></label><input id="formphone" type="text" value=""><br>
+    <label>Email:</label><label class="validate" id="emailvalid"></label><input id="formemail" type="text" value=""><br>
+    </fieldset><br>
+    <!--<input id="submit1" type="button" value="Submit">-->
+    <p id="submit1"><a class="btn btn-lg btn-success" href="#" role="button">Order My Pizza</a></p>       
+</form><br>  
+    <!--<input id="unhide" type="button" value="Show Address Form"><br>-->
+    <p id="unhide"><a class="btn btn-lg btn-success" href="#" role="button">Edit Address</a></p> 
+ <form id="form2">
+ <fieldset>
+ <h4>Choose Your Crust</h4>
+    <input type="radio" name="crust" id="hand_tossed" value="Hand Tossed"> Hand Tossed<br>
+    <input type="radio" name="crust" id="thin_crust" value="thincrust"> Thin Crust<br>
+    <input type="radio" name="crust" id="ny_style" value="nystyle"> New York Style<br>
+    <input type="radio" name="crust" id="gluten_free" value="glutenfree"> Gluten Free 
+<br>
+</fieldset><br>
+</form>
+
+<form id="form2a">
+<fieldset>
+<h4>Choose Your Size, Cheese and Sauce</h4>
+<b>Crust Size</b>
+<select id="crustsizes"></select>
+<br>
+<b>Cheese Options</b>
+<select id="cheeses"></select>
+<br>
+<b>Sauce Options</b>
+<select id="sauces"></select>
+<br>
+  </fieldset><br> 
+   <fieldset>
+<h4>Choose Your Toppings</h4>
+   <h6>Each topping is $0.99 extra</h6>  
+   
+      <div id="yourtoppings">
+       <div class="mytopping"><input type="checkbox" name="topping" value="Pepperoni"> Pepperoni&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Sausage"> Sausage&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Ham"> Ham&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Bacon"> Bacon&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Salami"> Salami&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Peppers">&nbsp;Peppers&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Olives"> Olives&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Jalapenos"> Jalapenos&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Mushrooms"> Mushrooms&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Pineapple"> Pineapple&nbsp;</div>
+       <div class="mytopping"><input type="checkbox" name="topping" value="Onion"> Onion</div>
+    </div>
+    </fieldset>
+    <br>
+    <p id="submit2"><a class="btn btn-lg btn-success" href="#" role="button">Finished Building Pizza</a></p>
+    <!--<input id="submit2" type="button" value="Finished Building Pizza">-->
+</form>   
+         
+<form id="form3">
+  <h4>Enter Your Billing Address</h4>
+  <input type="checkbox" name="copyaddress" id="copy_address" value="same"> Check this box if same as delivery information.<br>
+  <fieldset class="textfield">
+    <label>Name:</label><label class="validate" id="namevalid2"></label><input id="formname2" type="text" value=""><br>
+    <label>Street Address:</label><label class="validate" id="addvalid2"></label><input id="formaddress2" type="text" value=""><br>
+    <label>Apartment or Space (optional):</label><input id="formapt2" type="text" value=""><br>
+    <label>City:</label><label class="validate" id="cityvalid2"></label><input id="formcity2" type="text" value=""><br>
+    <label>State:</label><label class="validate" id="statevalid2"></label><input id="formstate2" type="text" value=""><br>
+    <label>ZIP:</label><label class="validate" id="zipvalid2"></label><input id="formzip2" type="text" value=""><br>
+    </fieldset>
+    <br>
+    <fieldset class="textfield">
+    <h4>Enter Your Credit Card Information</h4>
+    <label>Credit Card Number:</label><label class="validate" id="ccnvalid"></label><label class="validate" id="cardtype"></label><input id="cc_number" type="text" value=""><br>
+    <label>CVC:</label><label class="validate" id="cvcvalid"></label><input id="cvc_number" type="text" value=""><br>
+    <label>Expiration Month:</label><select id="expiration_month">
+        <option value="0">01</option>
+        <option value="1">02</option>
+        <option value="2">03</option>
+        <option value="3">04</option>
+        <option value="4">05</option>
+        <option value="5">06</option>
+        <option value="6">07</option>
+        <option value="7">08</option>
+        <option value="8">09</option>
+        <option value="9">10</option>
+        <option value="10">11</option>
+        <option value="11">12</option>
+        </select>
+    <label>Expiration Year:</label><select id="expiration_year">
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        
+    </select> 
+    </fieldset>
+    <br>
+    <!--<input id="submit3" type="button" value="Submit">-->       
+    <p id="submit3"><a class="btn btn-lg btn-success" href="#" role="button">Confirm Payment Information</a></p>
+ 
+ 
+ </form>  
+          
+        </div>
+
+        <div class="col-lg-4">
+          
+          
+    <div id="demo">
+        <h4>My Order</h4>
+            <p id="crust_order"><b>Crust: </b></p>
+            <p id="size_order"><b>Size: </b></p>
+            <p id="cheese_order"><b>Cheese: </b></p>
+            <p id="sauce_order"><b>Sauce: </b></p>
+          <b>Toppings: </b> <p id="topping_order"></p>
+          <b>Price:</b><p id="price_order"></p>   
+    </div>
+          
+      </div>
+         </div>
+      <footer class="footer">
+        <p>&copy; JS Pizza Company 2019</p>
+      </footer>
+
+    </div> <!-- /container -->
+    
+<!--Bootstrap stuff to be placed just before closing body tag-->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--My Javascript-->
+    <script src = "scripts.js"></script>
+
+</body>
+</html>
